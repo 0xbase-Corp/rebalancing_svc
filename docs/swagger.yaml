@@ -5,7 +5,7 @@ info:
     email: help@0xbase.org
     name: 0xSantos
     url: http://www.0xbase.org
-  description: This is Template server API documentation.
+  description: This is Rebalancing server API documentation.
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html

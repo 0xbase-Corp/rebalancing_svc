@@ -1,8 +1,8 @@
-# template_svc
+# rebalancing_svc
 
 This repositry is a written in Golang
 
-The template Backend service is responsible for handling all the requests made by **template_ui** service.
+The rebalancing Backend service is responsible for handling all the requests made by **rebalancing_ui** service.
 
 ## How to Run
 
@@ -18,7 +18,7 @@ The project can also be started by simply
     docker-compose up
 ```
 
-Navigatge to `localhost:5050/healthy` for health check of the server
+Navigatge to `localhost:5051/healthy` for health check of the server
 
 ## Directory Structure
 
@@ -40,7 +40,7 @@ Repository Layout is based on golang community recomneded best practices. More o
 swag init -g cmd/0xbase/main.go -o docs/
 ```
 
-Once the server is up, the swagger UI will be available at http://localhost:5050/swagger/index.html
+Once the server is up, the swagger UI will be available at http://localhost:5051/swagger/index.html
 
 ## Air - Live reload for Go apps
 

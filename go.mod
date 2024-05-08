@@ -1,4 +1,4 @@
-module github.com/0xbase-Corp/template_svc
+module github.com/0xbase-Corp/rebalancing_svc
 
 go 1.22
 

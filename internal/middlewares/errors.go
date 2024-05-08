@@ -3,8 +3,9 @@ package middlewares
 import (
 	"net/http"
 
-	"github.com/0xbase-Corp/template_svc/shared/errors"
 	"github.com/gin-gonic/gin"
+
+	"github.com/0xbase-Corp/rebalancing_svc/shared/errors"
 )
 
 // ErrorHandler is a middleware for handling errors and responding with appropriate JSON.

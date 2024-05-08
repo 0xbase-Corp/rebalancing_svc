@@ -33,7 +33,7 @@ var SwaggerInfo = &swag.Spec{
 	BasePath:         "/api/v1",
 	Schemes:          []string{},
 	Title:            "0xBase-Corp API",
-	Description:      "This is Template server API documentation.",
+	Description:      "This is Rebalancing server API documentation.",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 	LeftDelim:        "{{",

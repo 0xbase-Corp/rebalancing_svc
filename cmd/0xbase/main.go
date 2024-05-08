@@ -8,13 +8,13 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/swag/example/basic/docs"
 
-	"github.com/0xbase-Corp/template_svc/internal/middlewares"
-	"github.com/0xbase-Corp/template_svc/shared/configs"
+	"github.com/0xbase-Corp/rebalancing_svc/internal/middlewares"
+	"github.com/0xbase-Corp/rebalancing_svc/shared/configs"
 )
 
 //	@title			0xBase-Corp API
 //	@version		1.0
-//	@description	This is Template server API documentation.
+//	@description	This is Rebalancing server API documentation.
 //	@termsOfService	http://swagger.io/terms/
 
 //	@contact.name	0xSantos
