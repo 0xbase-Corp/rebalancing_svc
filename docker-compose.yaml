@@ -1,0 +1,61 @@
+version: "3.1"
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_HOST: postgres
+      POSTGRES_DB: template
+      TZ: America/Toronto
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - 5555:5432
+    networks:
+      - xbase
+
+  template_migrate:
+    build:
+      context: .
+      target: migrate
+    depends_on:
+      - postgres
+    networks:
+      - xbase
+    env_file:
+      - app.env
+
+  template_svc:
+    build:
+      context: .
+      target: api
+    depends_on:
+      - postgres
+      - template_migrate
+    ports:
+      - 5051:5051
+    networks:
+      - xbase
+    env_file:
+      - app.env
+
+  template_ui:
+    build:
+      context: ./portfolio_ui
+      dockerfile: Dockerfile
+    image: my-next-app
+    ports:
+      - "3000:3000"
+    networks:
+      - xbase
+
+networks:
+  xbase:
+    driver: bridge
+
+volumes:
+  db_data:
+    driver: local
+    name: xxxx_db_data
